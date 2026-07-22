@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/sam/Desktop/projects/noelleland/build",
+  "command": "/usr/bin/clang++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/sam/Desktop/projects/noelleland/include -g -std=gnu++17 -o CMakeFiles/noelleland.dir/src/main.cpp.o -c /home/sam/Desktop/projects/noelleland/src/main.cpp",
+  "file": "/home/sam/Desktop/projects/noelleland/src/main.cpp",
+  "output": "/home/sam/Desktop/projects/noelleland/build/CMakeFiles/noelleland.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/projects/noelleland/build",
+  "command": "/usr/bin/clang++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/sam/Desktop/projects/noelleland/include -g -std=gnu++17 -o CMakeFiles/noelleland.dir/src/gameState.cpp.o -c /home/sam/Desktop/projects/noelleland/src/gameState.cpp",
+  "file": "/home/sam/Desktop/projects/noelleland/src/gameState.cpp",
+  "output": "/home/sam/Desktop/projects/noelleland/build/CMakeFiles/noelleland.dir/src/gameState.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/projects/noelleland/build",
+  "command": "/usr/bin/clang++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/sam/Desktop/projects/noelleland/include -g -std=gnu++17 -o CMakeFiles/noelleland.dir/src/settings.cpp.o -c /home/sam/Desktop/projects/noelleland/src/settings.cpp",
+  "file": "/home/sam/Desktop/projects/noelleland/src/settings.cpp",
+  "output": "/home/sam/Desktop/projects/noelleland/build/CMakeFiles/noelleland.dir/src/settings.cpp.o"
+},
+{
+  "directory": "/home/sam/Desktop/projects/noelleland/build",
+  "command": "/usr/bin/clang++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/sam/Desktop/projects/noelleland/include -g -std=gnu++17 -o CMakeFiles/noelleland.dir/src/noelle.cpp.o -c /home/sam/Desktop/projects/noelleland/src/noelle.cpp",
+  "file": "/home/sam/Desktop/projects/noelleland/src/noelle.cpp",
+  "output": "/home/sam/Desktop/projects/noelleland/build/CMakeFiles/noelleland.dir/src/noelle.cpp.o"
+}
+]

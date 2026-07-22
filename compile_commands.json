@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/sam/Desktop/projects/noelleland",
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/sam/Desktop/projects/noelleland/include -std=gnu++17 -o CMakeFiles/noelleland.dir/src/main.cpp.o -c /home/sam/Desktop/projects/noelleland/src/main.cpp",
+  "file": "/home/sam/Desktop/projects/noelleland/src/main.cpp",
+  "output": "CMakeFiles/noelleland.dir/src/main.cpp.o"
+}
+]

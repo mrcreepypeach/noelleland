@@ -1,0 +1,3 @@
+/home/sam/Desktop/projects/noelleland/CMakeFiles/noelleland.dir
+/home/sam/Desktop/projects/noelleland/CMakeFiles/edit_cache.dir
+/home/sam/Desktop/projects/noelleland/CMakeFiles/rebuild_cache.dir

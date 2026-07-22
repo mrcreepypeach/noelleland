@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/noelleland.dir/link.d CMakeFiles/noelleland.dir/src/main.cpp.o -o noelleland  /usr/lib/libraylib.so.6.0.0 -lm
