@@ -32,7 +32,7 @@ noelle* checkCursorNoelles(){
 	Vector2 MousePosition = GetMousePosition();
 
 	for(noelle* N : AllNoelles){
-		float distance = Vector2Distance(N->position, MousePosition);
+		const float distance = Vector2Distance(N->position, MousePosition);
 		if (distance <= 30.0f){
 			std::cout << "clicked nole\n";
 			return N;

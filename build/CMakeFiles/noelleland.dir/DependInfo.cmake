@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/sam/Desktop/projects/noelleland/src/gameState.cpp" "CMakeFiles/noelleland.dir/src/gameState.cpp.o" "gcc" "CMakeFiles/noelleland.dir/src/gameState.cpp.o.d"
   "/home/sam/Desktop/projects/noelleland/src/main.cpp" "CMakeFiles/noelleland.dir/src/main.cpp.o" "gcc" "CMakeFiles/noelleland.dir/src/main.cpp.o.d"
+  "/home/sam/Desktop/projects/noelleland/src/noelle.cpp" "CMakeFiles/noelleland.dir/src/noelle.cpp.o" "gcc" "CMakeFiles/noelleland.dir/src/noelle.cpp.o.d"
+  "/home/sam/Desktop/projects/noelleland/src/settings.cpp" "CMakeFiles/noelleland.dir/src/settings.cpp.o" "gcc" "CMakeFiles/noelleland.dir/src/settings.cpp.o.d"
   "" "noelleland" "gcc" "CMakeFiles/noelleland.dir/link.d"
   )
 
