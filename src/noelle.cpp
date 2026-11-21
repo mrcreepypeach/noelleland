@@ -14,7 +14,10 @@ noelle::direction noelle::getDirection() const { return noelleDir; }
 
 void noelle::triggerAnimation(noelle::animations ANIM){
     noelle::currentAnimation = Animators.at(ANIM);
-    if (ANIM == noelle::animations::jumpscare){ PlaySound(NoelleSounds[noelle::sounds::jumpscare]); moving = false; }
+    if (ANIM == noelle::animations::jumpscare){
+        PlaySound(NoelleSounds[noelle::sounds::jumpscare]);
+        moving = false;
+    }
     currentFrame = 0;
     animationTimer = 0.0f;
     animating = true;

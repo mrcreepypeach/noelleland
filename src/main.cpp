@@ -15,14 +15,17 @@
 
 bool spawnCooldown {false};
 bool clearCooldown {false};
+bool flashCooldown {false};
 
 // counters
 
 const float defSpawnTimer {0.1f};
 const float defClearTimer {1.0f};
+const float defFlashTimer {0.5f};
 
 float spawnTimer {0.0f};
 float clearTimer {0.0f};
+float flashTimer {0.0f};
 int clearCountConsec {0};
 
 // noelle vector
@@ -104,7 +107,12 @@ int main() {
 
 		if (!game.paused){ // if game is currently playing
 			gameTime += GetFrameTime();
-			
+			// check cooldowns
+
+			if ((gameTime - spawnTimer) >= defSpawnTimer){ spawnCooldown = false; }
+			if ((gameTime - clearTimer) >= defClearTimer){ clearCooldown = false; }
+			if ((gameTime - flashTimer) >= defFlashTimer){ flashCooldown = false; }
+
 			if (IsKeyPressed(KEY_U)){
 				GetSetting<bool>("UncapFPS") = !GetSetting<bool>("UncapFPS");
 				if (GetSetting<bool>("UncapFPS")){ SetTargetFPS(0); }
@@ -115,6 +123,14 @@ int main() {
 
 			if ((IsKeyPressed(KEY_C)) && (gameTime - clearTimer) >= defClearTimer){
 				clearTimer = gameTime;
+				clearCooldown = true;
+				
+				// do a little flash
+				if ((gameTime - flashTimer) >= defFlashTimer){
+					flashTimer = gameTime;
+					flashCooldown = true;
+				}
+
 				for(noelle* n : AllNoelles){
 					delete n;
 				}
@@ -181,6 +197,27 @@ int main() {
 			// Draw cursor
 			
 			DrawTexture(cursorTexture, GetMouseX() - 10, GetMouseY() - 8, WHITE);
+
+			// check if clearing
+
+			if (!((gameTime - flashTimer) >= defFlashTimer) && flashCooldown){
+				float fadeProgress = (gameTime - flashTimer) / defFlashTimer;
+				
+				unsigned char value = static_cast<unsigned char>(255.0f * (1.0f - fadeProgress));
+				Color fade;
+
+				if (clearCountConsec > 5 && clearCountConsec < 10){
+					fade = {value, 0,0, 255 }; // change color later
+				}
+				else if (clearCountConsec >= 10){
+					fade = {value, 0,0, 255 };
+				}
+				else{
+					fade = {value, value, value, 255 };
+				}
+
+				ClearBackground(fade);
+			}
 		}
 		else{ // paused stuff
 			ClearBackground(BLACK);
