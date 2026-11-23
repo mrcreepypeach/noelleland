@@ -13,15 +13,19 @@
 
 #define gameTime game.gameTime
 
-bool spawnCooldown {false};
-bool clearCooldown {false};
-bool flashCooldown {false};
-
-// counters
+// constants
 
 const float defSpawnTimer {0.1f};
 const float defClearTimer {1.0f};
 const float defFlashTimer {0.5f};
+
+const float clickDistance {30.0f};
+
+// counters
+
+bool spawnCooldown {false};
+bool clearCooldown {false};
+bool flashCooldown {false};
 
 float spawnTimer {0.0f};
 float clearTimer {0.0f};
@@ -36,7 +40,7 @@ noelle* checkCursorNoelles(){
 
 	for(noelle* N : AllNoelles){
 		const float distance = Vector2Distance(N->position, MousePosition);
-		if (distance <= 30.0f){
+		if (distance <= clickDistance){
 			std::cout << "clicked nole\n";
 			return N;
 			break;
@@ -131,7 +135,7 @@ int main() {
 					flashCooldown = true;
 				}
 
-				for(noelle* n : AllNoelles){
+				for (noelle* n : AllNoelles){
 					delete n;
 				}
 				AllNoelles.clear();
@@ -198,7 +202,7 @@ int main() {
 			
 			DrawTexture(cursorTexture, GetMouseX() - 10, GetMouseY() - 8, WHITE);
 
-			// check if clearing
+			// check if clearing, do the cool fade effect
 
 			if (!((gameTime - flashTimer) >= defFlashTimer) && flashCooldown){
 				float fadeProgress = (gameTime - flashTimer) / defFlashTimer;
